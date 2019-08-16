@@ -1,0 +1,29 @@
+{
+  "name": "mongodb-scraper",
+  "version": "1.0.0",
+  "description": "The MongoDB scraper collects articles from across the web. Articles are checked to ensure they aren't already in the database",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mavstronaut/mongoDB-scraper.git"
+  },
+  "keywords": [
+    "mongodb"
+  ],
+  "author": "mavstronaut",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mavstronaut/mongoDB-scraper/issues"
+  },
+  "homepage": "https://github.com/mavstronaut/mongoDB-scraper#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cheerio": "^1.0.0-rc.3",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "path": "^0.12.7"
+  }
+}

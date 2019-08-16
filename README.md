@@ -1,5 +1,12 @@
 # mongoDB-scraper
 
+## Overview
+The MongoDB scraper collects articles from across the web. Articles are checked to ensure they aren't already in the database 
+
+## Demo
+* [How it works](https://youtu.be/4ltZr3VPmno)
+* [Live Link]()
+
 
 ## Instructions
 
