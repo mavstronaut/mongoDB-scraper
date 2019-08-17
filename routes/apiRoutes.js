@@ -42,6 +42,32 @@ module.exports = function (app) {
         });
     });
 
-    
+    app.get("/display-saved/", function(req, res) {
+        db.Article.find(
+            {saved: true}
+        ).then(function(data) {
+            res.json(data);
+        });
+    });
+
+    app.put("/delete-from-saved/:articleId", function(req, res) {
+        db.Article.findByIdAndUpdate(req.params.articleId, { $set: { saved: false}
+        }).then(function(data) {
+            res.json(data);
+        });
+    });
+
+    app.post("/create-note/:/articleId", function(req, res) {
+        console.log(req.body);
+        db.Note.create(req.body)
+        .then(function(dbNote) {
+            console.log(dbNote._id)
+            return db.Article.findOneAndUpdate({_id: req.params.articleId}, { $push: { note: dbNote._id } }, {new: true});
+        }).then(function(dbArticle) {
+            res.json(dbArticle);
+        }).catch(function(err) {
+            res.json(err);
+        });
+    });
 
 }
