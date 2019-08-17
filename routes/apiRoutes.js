@@ -70,4 +70,20 @@ module.exports = function (app) {
         });
     });
 
+    app.get("/show-article-notes/:articleId", function(req, res) {
+        db.Article.findById(req.params.articleId)
+        .populate("note")
+        .then(function(dbArticle) {
+            req.json(dbArticle);
+        }).catch(function(err) {
+            res.json(err);
+        });
+    });
+
+    app.delete("/delete-note/:noteId", function (req, res) {
+        db.Note.findByIdAndRemove(req.params.noteId, (err, note) => {
+            if (err) return res.status(500).send(err);
+            return res.status(200).send();
+        });
+    });
 }
