@@ -74,8 +74,25 @@ var displayNotes = function(articleId) {
             savedNotes.append(listItem);
         };
 
-    
+    $("#hideNotes").on("click", function() {
+        document.getElementById("notes").style.display="none";
+        document.getElementById("saved").style.display="block";
+    });
 
+    $(".saveNoteButton").on("click", function() {
+        var articleId = $(this).attr('id');
+        saveNewNote(articleId);
+    });
 
-    })
-}
+    $(".deleteNoteButton").on("click", function() {
+        var noteId = $(this).attr('id');
+        articleIdFromNote = savedNote.article;
+        console.log("deleteNoteButton clicked");
+        console.log(articleIdFromNote);
+        deleteNote(noteId);
+    });
+
+    clearTextField();
+
+    });
+};
