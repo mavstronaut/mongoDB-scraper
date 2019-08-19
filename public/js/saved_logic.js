@@ -96,3 +96,17 @@ var displayNotes = function(articleId) {
 
     });
 };
+
+const deleteNote = function(noteId) {
+    $.ajax({
+        type: "DELETE",
+        url: "/delete-note/" + noteId
+    }).then(function(response) {
+        console.log(response);
+
+        const savedArticleResults = $("#savedArticles");
+        savedArticleResults.empty();
+
+        
+    })
+}
