@@ -58,3 +58,23 @@ $("#scrapeButton").on("click", function() {
     showScrapeResults();
 
 });
+
+$(document).on("click", '.saveButton', function() {
+    var articleId = $(this).attr('id');
+    console.log("Article ID: " + articleId);
+
+    $.ajax({
+        type: "PUT",
+        url: "/save-article" + articleId
+    }).then(function(response) {
+        console.log(JSON.stringify(response));
+    });
+});
+
+const hideContainer = function() {
+    $("#container").hide();
+};
+
+const showScrapeResults = function() {
+    $("#scrapeResults").show(600);
+};
