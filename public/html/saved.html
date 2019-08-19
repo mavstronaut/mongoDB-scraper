@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Judicial_Scraper</title>
+        <title>Judicial_Saved_Articles</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css"/>
@@ -22,6 +22,20 @@
 
     <body>
 
+        <div id="primary">
+            <p>Judicial News: Headlines from the courts</p>
+        </div>
+
+        <div id="secondary">
+            <a id="headerButton" href="../html/index.html" role="button" class="btn btn-primary btn-lg btn-block">Return Home</a>
+        </div>
+
+        <div id="saved" class="card" style="display: block">
+            <p class="card-header">Your saved articles: </p>
+            <div id="savedArticlesDiv" class="card-body">
+                <ol id="savedArticles"></ol>
+            </div>
+        </div>
     
         
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
