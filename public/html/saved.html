@@ -36,6 +36,20 @@
                 <ol id="savedArticles"></ol>
             </div>
         </div>
+
+        <div id="notes" class="card" style="display: none">
+            <div id="notesHeader">
+                <p class="card-header" style="display: inline-flex">Article Notes: </p>
+                <button id="hideNotes" style="display: inline-flex">Back to saved Articles</button>
+            </div>
+            <div id="savedArticleNotesDiv" class="card-body">
+                <ul id="savedArticleNotes"></ul>
+            </div>
+            <div class="input-group">
+                <input id="noteTextInput" type="text" class="form-control" placeholder="add new note" aria-label="Add new note with two button addons" aria-describedby="button-addon4">
+                <div class="input-group-append" id="button-addon4"></div>
+            </div>
+        </div>
     
         
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
