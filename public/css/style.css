@@ -1,0 +1,148 @@
+/*  */
+
+body {
+    background-color: dodgerblue;
+}
+
+#primary {
+    background-color: wheat;
+    text-align: center;
+    padding: 20px 0px;
+}
+
+#primary p {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 30px;
+    color: black;
+}
+
+#viewSavedButton {
+    background-color: deepskyblue;
+    color: black;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 20px;
+    border: 1px solid black;
+}
+
+#viewSavedButton:hover {
+    box-shadow: 4px 4px 2px darkslategray;
+    color: black;
+    border: 1px solid black;
+}
+
+#scrapeButton, #headerButton {
+    color: black;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 25px;
+    background: cornflowerblue;
+    border: 1px solid black;
+    margin-bottom: 50px;
+}
+
+#scrapeButton:hover, #headerButton:hover {
+    color: darkslategray;
+}
+
+#container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin: 0px 2%;
+    align-items: stretch;
+}
+
+.img-main {
+    width: 33%;
+    height: 100%;
+    border: 2px solid black;
+    flex-grow: 1;
+}
+
+#slideshow {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    height: 100%;
+}
+
+#scrapeResults, #saved, #notes {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.card-header {
+    background-color: #DCDCDC; 
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 25px;
+    color:black;
+    border-bottom: none;
+}
+
+#articlesDiv, #savedArticlesDiv, #savedArticleNotesDiv {
+
+}
+
+.savedButton, .notesButton, .deleteButton {
+    background-color: deepskyblue;
+    margin-left: 10px;
+    color: black;
+    border: 1px solid black;
+}
+
+
+.saveButton:hover, .notesButton:hover, .deleteButton:hover, #saveNoteButton:hover {
+    background-color: transparent;
+    color: deepskyblue;
+}
+
+.title {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+#notesHeader {
+    background-color: #DCDCDC;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+}
+
+#hideNotes {
+    background-color: deepskyblue;
+    margin-left: 10px;
+    color: black;
+    border: 1px solid black;
+    padding: 8px 5px;
+    border-radius: .25rem;
+}
+
+.saveNoteButton {
+    background-color: deepskyblue;
+    color: black;
+    border-radius: .25rem;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.input-group {
+    padding: 5px 2%;
+    background-color: #DCDCDC;
+}
+
+ul {
+    list-style-type: none;
+    margin-right: 3%;
+}
+
+#savedArticleNotes li {
+    border-top: 1px solid #DCDCDC;
+    padding: 10px;
+    box-shadow: 5px 10px 18px #888888;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-family: 'Fjalla One', sans-serif;
+}
+
+.deleteNoteButton {
+    background-color: deepskyblue;
+    color: black;
+    border-radius: .25rem;
+    padding: 8px 15px 5px 15px;
+}
