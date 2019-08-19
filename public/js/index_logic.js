@@ -1,10 +1,11 @@
 var slideIndex = 0;
 carousel();
+
 function carousel() {
     var i;
-    var x = document.getElementsByClassName("headSlide");
-    for (i=0; i < x.length; i++) {
-        x[i].getElementsByClassName.display="none";
+    var carImgs = document.getElementsByClassName("headSlide");
+    for (i=0; i < carImgs.length; i++) {
+        carImgs[i].getElementsByClassName.display="none";
     }
     slideIndex++;
     if (slideIndex > x.length) {slideIndex = 1}
