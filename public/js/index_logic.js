@@ -8,7 +8,7 @@ function carousel() {
         carImgs[i].getElementsByClassName.display="none";
     }
     slideIndex++;
-    if (slideIndex > x.length) {slideIndex = 1}
+    if (slideIndex > carImgs.length) {slideIndex = 1}
     x[slideIndex -1].getElementsByClassName.display = "block";
     setTimeout(carousel, 2000);
 };
