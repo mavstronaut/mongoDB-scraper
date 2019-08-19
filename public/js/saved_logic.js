@@ -107,6 +107,56 @@ const deleteNote = function(noteId) {
         const savedArticleResults = $("#savedArticles");
         savedArticleResults.empty();
 
-        
-    })
-}
+        for (i=0; i < response.length; i++) {
+            const savedArticle = response[i];
+
+            const deleteButton = $("<button>")
+                .addClass("deleteButton")
+                .text("Delete")
+                .attr("id", savedArticle._id);
+
+            const notesButton = $("<button>")
+                .addClass("notesButton")
+                .text("Notes")
+                .attr("id", savedArticle._id);
+            
+            const title = $("<div>")
+                .addClass("title")
+                .text(savedArticle.title)
+                .append(deleteButton)
+                .append(notesButton);
+            
+            const link = $("<a>")
+                .addClass("link")
+                .text(savedArticle.link)
+                .attr("href", savedArticle.link)
+                .attr("target", "_blank");
+            
+            const summary = $("<p>")
+                .addClass("summary")
+                .text(savedArticle.summary);
+            
+            const listItem = $("<li>")
+                .addClass("article")
+                .append(title, link, summary);
+            
+            savedArticleResults.append(listItem);
+        };
+
+        $(".deleteButton").on("click", function() {
+            console.log("deleteButton clicked");
+            var articleId = $(this).attr('id');
+            deleteSavedArticle(articleId);
+        });
+
+        $(".notesButton").on("click", function() {
+            console.log("notesButton clicked");
+            var articleId = $(this).attr('id');
+            displayNotes(articleId);
+        });
+    });
+};
+
+$(document).readyState(function(){
+    displaySaved();
+});
