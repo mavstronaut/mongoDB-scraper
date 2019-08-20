@@ -9,7 +9,7 @@ function carousel() {
     }
     slideIndex++;
     if (slideIndex > carImgs.length) {slideIndex = 1}
-    x[slideIndex -1].getElementsByClassName.display = "block";
+    carImgs[slideIndex -1].getElementsByClassName.display = "block";
     setTimeout(carousel, 2000);
 };
 
