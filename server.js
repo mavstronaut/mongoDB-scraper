@@ -18,7 +18,18 @@ require("./routes/htmlRoutes")(app);
 
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/JudiciaryScraper";
 
-mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
+async function mongoConnect(MONGODB_URI) {
+    try {    
+        await mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
+        console.log("mongo has connected");
+    } catch(err) {
+        console.error("failed to connect mongo");
+    }
+
+    
+}
+
+mongoConnect(MONGODB_URI);
 
 app.listen(PORT, function() {
     console.log("We're live on port "+ PORT);
