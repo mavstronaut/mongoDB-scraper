@@ -2,18 +2,19 @@ var slideIndex = 0;
 carousel();
 
 function carousel() {
-    var i;
+    var imgOn;
     var carImgs = document.getElementsByClassName("headSlide");
-    for (i=0; i < carImgs.length; i++) {
-        carImgs[i].getElementsByClassName.display="none";
+    for (imgOn=0; imgOn < carImgs.length; imgOn++) {
+        carImgs[imgOn].getElementsByClassName.display = "none";
     }
     slideIndex++;
     if (slideIndex > carImgs.length) {slideIndex = 1}
-    carImgs[slideIndex -1].getElementsByClassName.display = "block";
+    carImgs[slideIndex-1].style.display = "block";
     setTimeout(carousel, 2000);
 };
 
 $("#scrapeButton").on("click", function() {
+    console.log("scrapeButton clicked");
     $.ajax({
         type: "GET",
         url: "/articles"
@@ -66,7 +67,7 @@ $(document).on("click", '.saveButton', function() {
 
     $.ajax({
         type: "PUT",
-        url: "/save-article" + articleId
+        url: "/save-article/" + articleId
     }).then(function(response) {
         console.log(JSON.stringify(response));
     });
