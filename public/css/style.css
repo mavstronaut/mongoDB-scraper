@@ -80,9 +80,9 @@ body {
     border-bottom: none;
 }
 
-/* #articlesDiv, #savedArticlesDiv, #savedArticleNotesDiv {
-
-} */
+#articlesDiv, #savedArticlesDiv, #savedArticleNotesDiv {
+    background-image: url("../images/supreme-court.jpg");
+}
 
 .savedButton, .notesButton, .deleteButton {
     background-color: deepskyblue;
