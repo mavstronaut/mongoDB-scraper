@@ -18,6 +18,8 @@ require("./routes/htmlRoutes")(app);
 
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/JudiciaryScraper";
 
+mongoose.connect(MONGODB_URI, { userNewUrlParser: true });
+
 app.listen(PORT, function() {
     console.log("We're live on port "+ PORT);
 });
