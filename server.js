@@ -8,6 +8,7 @@ var PORT = process.env.PORT || 3030;
 const app = express();
 
 app.use(express.static("public"));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json({type: 'application/*+json'}));
 app.use(bodyParser.raw({type: 'application/vnd.custom-type'}));
 app.use(bodyParser.text({type: 'text/html'}));
