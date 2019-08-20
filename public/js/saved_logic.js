@@ -157,6 +157,6 @@ const deleteNote = function(noteId) {
     });
 };
 
-$(document).readyState(function(){
+$(document).ready(function(){
     displaySaved();
 });
