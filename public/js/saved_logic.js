@@ -102,6 +102,15 @@ const deleteNote = function(noteId) {
         type: "DELETE",
         url: "/delete-note/" + noteId
     }).then(function(response) {
+        displayNotes(articleIdFromNote);
+    });
+};
+
+const displaySaved = function() {
+    $.ajax({
+        type: "GET",
+        url: "/display-saved/"
+    }).then(function(response) {
         console.log(response);
 
         const savedArticleResults = $("#savedArticles");
