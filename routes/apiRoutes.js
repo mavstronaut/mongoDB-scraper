@@ -12,7 +12,7 @@ module.exports = function (app) {
 
             $("a.story-link").each(function(i, element) {
                 const link = $(element).attr("href");
-                const title = $($(element).find(h2.headline)[0]).text().trim()
+                const title = $($(element).find("h2.headline")[0]).text().trim()
                 const summary = $($(element).find("p.summary")[0]).text().trim();
                 results.push({
                     link: link,
