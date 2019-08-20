@@ -8,7 +8,7 @@ module.exports = function (app) {
         request("https://www.nytimes.com/topic/subject/courts-and-the-judiciary", function(error, response, html) {
             const $ = cheerio.load(html);
 
-            const results = [];
+            var results = [];
 
             $("a.story-link").each(function(i, element) {
                 const link = $(element).attr("href");
@@ -51,13 +51,13 @@ module.exports = function (app) {
     });
 
     app.put("/delete-from-saved/:articleId", function(req, res) {
-        db.Article.findByIdAndUpdate(req.params.articleId, { $set: { saved: false}
+        db.Article.findByIdAndUpdate(req.params.articleId, { $set: { saved: false }
         }).then(function(data) {
             res.json(data);
         });
     });
 
-    app.post("/create-note/:/articleId", function(req, res) {
+    app.post("/create-note/:articleId", function(req, res) {
         console.log(req.body);
         db.Note.create(req.body)
         .then(function(dbNote) {
