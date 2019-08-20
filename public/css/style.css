@@ -49,6 +49,9 @@ body {
     justify-content: center;
     margin: 0px 2%;
     align-items: stretch;
+    background-image: url('../images/supreme-court.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
 }
 
 .img-main {
@@ -77,9 +80,9 @@ body {
     border-bottom: none;
 }
 
-#articlesDiv, #savedArticlesDiv, #savedArticleNotesDiv {
+/* #articlesDiv, #savedArticlesDiv, #savedArticleNotesDiv {
 
-}
+} */
 
 .savedButton, .notesButton, .deleteButton {
     background-color: deepskyblue;
