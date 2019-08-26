@@ -26,12 +26,9 @@ async function mongoConnect(MONGODB_URI) {
     } catch(err) {
         console.error("failed to connect mongo");
     }
-
-    
 };
 
 mongoConnect(MONGODB_URI);
-
 
 app.listen(PORT, function() {
     console.log("We're live on port "+ PORT);
