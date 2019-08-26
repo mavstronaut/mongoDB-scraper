@@ -5,7 +5,7 @@ The MongoDB scraper collects articles from across the web. Articles are checked 
 
 ## Demo
 * [How it works](https://youtu.be/4ltZr3VPmno)
-* [Live Link]()
+* [Live Link](https://mong0-scraper.herokuapp.com/)
 
 
 ## Instructions
