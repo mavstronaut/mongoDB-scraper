@@ -18,6 +18,7 @@ require("./routes/htmlRoutes")(app);
 
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/JudiciaryScraper";
 
+
 async function mongoConnect(MONGODB_URI) {
     try {    
         await mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
@@ -25,9 +26,7 @@ async function mongoConnect(MONGODB_URI) {
     } catch(err) {
         console.error("failed to connect mongo");
     }
-
-    
-}
+};
 
 mongoConnect(MONGODB_URI);
 
