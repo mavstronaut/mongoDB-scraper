@@ -78,5 +78,5 @@ const hideContainer = function() {
 };
 
 const showScrapeResults = function() {
-    $("#scrapeResults").show(6000);
+    $("#scrapeResults").show(6000).then(console.log("behold your list items .show"));
 };
