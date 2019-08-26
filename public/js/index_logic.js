@@ -1,17 +1,17 @@
-var slideIndex = 0;
-carousel();
+// var slideIndex = 0;
+// carousel();
 
-function carousel() {
-    var imgOn;
-    var carImgs = document.getElementsByClassName("headSlide");
-    for (imgOn=0; imgOn < carImgs.length; imgOn++) {
-        carImgs[imgOn].getElementsByClassName.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > carImgs.length) {slideIndex = 1}
-    carImgs[slideIndex-1].style.display = "block";
-    setTimeout(carousel, 2000);
-};
+// function carousel() {
+//     var imgOn;
+//     var carImgs = document.getElementsByClassName("headSlide");
+//     for (imgOn=0; imgOn < carImgs.length; imgOn++) {
+//         carImgs[imgOn].getElementsByClassName.display = "none";
+//     }
+//     slideIndex++;
+//     if (slideIndex > carImgs.length) {slideIndex = 1}
+//     carImgs[slideIndex-1].style.display = "block";
+//     setTimeout(carousel, 2000);
+// };
 
 $("#scrapeButton").on("click", function() {
     console.log("scrapeButton clicked");
@@ -53,11 +53,11 @@ $("#scrapeButton").on("click", function() {
             
                 articleResults.append(listItem);
         }
+
+        hideContainer();
+
+        showScrapeResults();
     });
-
-    hideContainer();
-
-    showScrapeResults();
 
 });
 
@@ -78,5 +78,5 @@ const hideContainer = function() {
 };
 
 const showScrapeResults = function() {
-    $("#scrapeResults").show(600);
+    $("#scrapeResults").show(6000);
 };
